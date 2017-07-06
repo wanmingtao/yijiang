@@ -1,0 +1,49 @@
+$countPerpage:20;
+$designWidth:1080px;
+@function R($px) {
+    //width*countPerpage/designWidth
+    @return ($px*$countPerpage/$designWidth)*1rem;
+}
+
+.header {
+    ul {
+        li {
+            .iconfont {
+                font-size: R(90px);
+            }
+        }
+    }
+}
+
+.continer {
+    dl {
+        dt {
+            img {
+                height: R(566px);
+                width: 100%;
+            }
+        }
+        dd {
+            height: R(530px);
+            background: white;
+            ul {
+                display: flex;
+                li {
+                     
+                     display: flex;
+                     flex-direction: column;
+                     justify-content: space-between;
+                     width: 33.3%; 
+                    img {
+                        height: R(280px); 
+                        
+                    }
+                    p{
+                        text-align: center;
+                        line-height: R(100px);
+                    }
+                }
+            }
+        }
+    }
+}

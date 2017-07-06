@@ -1,0 +1,70 @@
+$countPerpage:20;
+$designWidth:1080px;
+@function R($px) {
+    //width*countPerpage/designWidth
+    @return ($px*$countPerpage/$designWidth)*1rem;
+}
+
+.header{
+    ul{
+        li{
+            .iconfont{
+                font-size: R(90px);
+            }
+        }
+    }
+}
+.continer{
+    background: #fafafa;
+    .nav{
+        height: R(626px);
+        width: 100%;
+        background: #fafafa;
+        ul{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            text-align: center;
+            color: #3e3e3e;
+            
+            li{
+                
+                width: 25%;
+                img{
+                    margin-top: R(20px);
+                    margin-left: 15%; 
+                    width: 70%;
+                }
+                span{
+                    font-size: R(45px);
+                    display: inline-block;
+                    text-indent: 1em;
+                }
+                
+            }
+        }
+    }
+    .con{
+        margin-top: R(40px);
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        
+        dl{
+            width: 50%;
+            text-align: center;
+            
+            
+            dt{
+                img{
+                    width: R(532px);
+                    height: R(521px);
+                }
+            }
+            dd{
+                line-height: R(156px);
+                
+            }
+        }
+    }
+}

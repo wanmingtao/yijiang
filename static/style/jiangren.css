@@ -1,0 +1,40 @@
+.header ul li .iconfont {
+  font-size: 1.66667rem; }
+
+.continer {
+  background: #fafafa; }
+  .continer .nav {
+    height: 11.59259rem;
+    width: 100%;
+    background: #fafafa; }
+    .continer .nav ul {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      text-align: center;
+      color: #3e3e3e; }
+      .continer .nav ul li {
+        width: 25%; }
+        .continer .nav ul li img {
+          margin-top: 0.37037rem;
+          margin-left: 15%;
+          width: 70%; }
+        .continer .nav ul li span {
+          font-size: 0.83333rem;
+          display: inline-block;
+          text-indent: 1em; }
+  .continer .con {
+    margin-top: 0.74074rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; }
+    .continer .con dl {
+      width: 50%;
+      text-align: center; }
+      .continer .con dl dt img {
+        width: 9.85185rem;
+        height: 9.64815rem; }
+      .continer .con dl dd {
+        line-height: 2.88889rem; }
+
+/*# sourceMappingURL=jiangren.css.map */

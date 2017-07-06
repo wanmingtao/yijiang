@@ -1,0 +1,62 @@
+.header ul li .iconfont {
+  font-size: 1.66667rem; }
+
+.continer #swiper {
+  height: 11.11111rem;
+  width: 100%;
+  background: red; }
+  .continer #swiper .swiper-wrapper img {
+    height: 11.11111rem;
+    width: 100%; }
+.continer .daohang {
+  height: 12rem;
+  width: 100%;
+  background: #f9f9f9; }
+  .continer .daohang ul {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; }
+    .continer .daohang ul li {
+      width: 25%; }
+      .continer .daohang ul li img {
+        margin: 20% 10%;
+        width: 80%; }
+.continer .tuijian h1 {
+  font-weight: 500;
+  text-align: center;
+  line-height: 2.72222rem;
+  height: 2.72222rem;
+  font-size: 1.48148rem; }
+.continer .tuijian ul li img {
+  height: 11.94444rem;
+  width: 100%; }
+.continer .tuijian p {
+  background: white;
+  height: 3.05556rem;
+  text-align: center;
+  line-height: 3.05556rem; }
+.continer .juti {
+  margin-top: 0.74074rem; }
+  .continer .juti .up {
+    margin-top: 0.74074rem;
+    background: white; }
+    .continer .juti .up img {
+      height: 10rem; }
+  .continer .juti .swiper-wrapper img {
+    height: 7.68519rem; }
+  .continer .juti .down {
+    background: white;
+    margin-top: 0.74074rem; }
+    .continer .juti .down .done {
+      text-align: center;
+      height: 4rem; }
+      .continer .juti .down .done h1 {
+        font-size: 1.48148rem;
+        font-weight: 500;
+        line-height: 2.27778rem; }
+      .continer .juti .down .done p {
+        color: #999;
+        line-height: 1.85185rem; }
+
+/*# sourceMappingURL=jingxuan.css.map */

@@ -1,0 +1,45 @@
+$countPerpage:20;
+$designWidth:1080px;
+@function R($px) {
+    //width*countPerpage/designWidth
+    @return ($px*$countPerpage/$designWidth)*1rem;
+}
+.nav{
+//  overflow: hidden;
+    box-sizing: border-box;
+    padding-top: R(10px);
+    width: 100%;
+    background: #dcdcdc;
+    height: R(162px);
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    a{
+        
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        color: black;
+        .iconfont{
+            
+            display: inline-block;
+            width: 100%;
+            font-size: R(80px);
+            
+            text-align: center;
+            
+        }
+        span{
+            font-size: R(50px);
+            display: inline-block;
+            
+        }
+    }
+    .active{
+        color:#999;
+    }  
+}
+
+
+
+

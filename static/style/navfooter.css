@@ -1,0 +1,26 @@
+.nav {
+  box-sizing: border-box;
+  padding-top: 0.18519rem;
+  width: 100%;
+  background: #dcdcdc;
+  height: 3rem;
+  display: flex;
+  text-align: center;
+  justify-content: space-around; }
+  .nav a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: black; }
+    .nav a .iconfont {
+      display: inline-block;
+      width: 100%;
+      font-size: 1.48148rem;
+      text-align: center; }
+    .nav a span {
+      font-size: 0.92593rem;
+      display: inline-block; }
+  .nav .active {
+    color: #999; }
+
+/*# sourceMappingURL=navfooter.css.map */

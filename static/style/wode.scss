@@ -1,0 +1,16 @@
+$countPerpage:20;
+$designWidth:1080px;
+@function R($px) {
+    //width*countPerpage/designWidth
+    @return ($px*$countPerpage/$designWidth)*1rem;
+}
+.header{
+    ul{
+        li{
+            .iconfont{
+                font-size: R(90px);
+            } 
+             
+        }
+    }
+}
