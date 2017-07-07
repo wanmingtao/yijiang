@@ -7,6 +7,10 @@ import Jiangren from '@/components/Jiangren'
 import Jiangwu from '@/components/Jiangwu'
 import Wode from '@/components/Wode'
 import Searche from '@/components/Searche'
+import Cart from '@/components/Cart'
+import Order from '@/components/Order'
+import Comment from '@/components/Comment'
+import Coupon from '@/components/Coupon'
 import { Navbar, TabItem } from 'mint-ui';
 
 Vue.component(Navbar.name, Navbar);
@@ -50,6 +54,26 @@ export default new Router({
       path: '/searche',
       name: 'Searche',
       component: Searche
+    },
+    {
+      path: '/cart',
+      name: 'Cart',
+      component: Cart
+    },
+    {
+      path: '/order',
+      name: 'Order',
+      component: Order
+    },
+    {
+      path: '/comment',
+      name: 'Comment',
+      component: Comment
+    },
+    {
+      path: '/coupon',
+      name: 'Coupon',
+      component: Coupon
     }
   ]
 })

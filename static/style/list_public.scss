@@ -1,0 +1,11 @@
+$countPerpage:20;
+$designWidth:1080px;
+@function R($px) {
+    @return ($px*$countPerpage/$designWidth)*1rem;
+}
+
+.header{
+    width:100%;
+    height:R(164px);
+    border-bottom:1px solid #ccc;
+}
