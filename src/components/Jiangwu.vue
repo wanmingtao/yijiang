@@ -4,7 +4,7 @@
 			<div class="header">
 				<ul>
 					<li>匠物</li>
-					<li><a href=""><i class="iconfont">&#xe634;</i></a></li>
+					<li><a href="#/Searche"><i class="iconfont">&#xe6e4;</i></a></li>
 				</ul>
 			</div>
 			<div class="continer">

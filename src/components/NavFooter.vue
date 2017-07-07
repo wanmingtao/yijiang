@@ -1,9 +1,9 @@
 <template>
 	<div class="nav">
-		<router-link to="/" active-class="active" exact><i class="iconfont">&#xe501;</i><span>精选</span></router-link>
-		<router-link to="/jiangren" active-class="active" exact><i class="iconfont">&#xe502;</i><span>匠人</span></router-link>
-		<router-link to="/jiangwu" active-class="active" exact><i class="iconfont">&#xe88b;</i><span>匠物</span></router-link>
-		<router-link to="/wode" active-class="active" exact><i class="iconfont">&#xe62f;</i><span>我的</span></router-link>
+		<router-link to="/" active-class="active" exact><i class="iconfont">&#xe608;</i><span>精选</span></router-link>
+		<router-link to="/jiangren" active-class="active" exact><i class="iconfont">&#xe612;</i><span>匠人</span></router-link>
+		<router-link to="/jiangwu" active-class="active" exact><i class="iconfont">&#xe60c;</i><span>匠物</span></router-link>
+		<router-link to="/wode" active-class="active" exact><i class="iconfont">&#xe600;</i><span>我的</span></router-link>
 		
 		
 		

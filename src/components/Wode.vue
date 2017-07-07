@@ -4,7 +4,7 @@
 			<div class="header">
 				<ul>
 					<li>我的</li>
-					<li><a href=""><i class="iconfont">&#xe628;</i></a></li>
+					<li><a href=""><i class="iconfont">&#xe616;</i></a></li>
 				</ul>
 			</div>
 			<div class="continer">
@@ -29,7 +29,6 @@
 				<h1>编辑区</h1>
 				<h1>编辑区</h1>
 				<h1>编辑区</h1>
-				<h2>123</h2>
 			</div>
 		</div>
 		<NavFooter></NavFooter>

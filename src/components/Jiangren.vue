@@ -5,7 +5,7 @@
 				<ul>
 					<li>匠人</li>
 					<li>
-						<a href=""><i class="iconfont">&#xe634;</i></a>
+						<a href="#/Searche"><i class="iconfont">&#xe6e4;</i></a>
 					</li>
 				</ul>
 			</div>
