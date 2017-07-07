@@ -38,7 +38,7 @@
 	import { mapGetters, mapActions } from 'vuex';
 	import NavFooter from './NavFooter';
 	export default {
-		name: 'wode',
+		name: 'jingxuan',
 		components: {
 			NavFooter
 		},
@@ -48,6 +48,12 @@
 
 			}
 		},
+//		mounted:function(){
+//		this.$router.push({//你需要接受路由的参数再跳转
+//                          path:'/regest'
+//                        });
+//			
+//		},
 		methods: {
 			...mapActions([
 				'savedata'
@@ -59,4 +65,5 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
   @import"../../static/style/wode.scss"
+
 </style>

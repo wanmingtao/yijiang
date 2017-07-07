@@ -1,65 +1,82 @@
 <template>
-  <div class="regest">
-     姓名：<input type="text" ref="username" /><br/> 
-     密码：<input type="text" ref="psw" /><br/> 
-     <button @click="login">登录</button>
-     <div v-show="$store.state.waiting">正在提交数据，请稍后......</div>
-  </div>
+	<div>
+		<div class="header">
+			<a href="/wode"><img src="../../static/img/jiantou.gif" /></a>
+			<div>
+				<span class="one">登录及注册</span>
+				<span class="two">短信登录</span>
+			</div>
+		</div>
+		<div class="login">
+			<i class="iconfont">&#xe600;</i><input type="text" placeholder="Username/phone" ref="username" /><br/>
+			<i class="iconfont">&#xe60a;</i><input type="password" placeholder="Password" ref="psw" /><br/>
+			<button @click="login">登录</button>
+			<p><span>忘记密码</span><span>没有账号？</span><span @click="regests">注册</span></p>
+			<!--<div v-show="$store.state.waiting">正在提交数据，请稍后......</div>-->
+		</div>
+	</div>
 </template>
 
 <script>
-import { mapGetters,mapActions} from 'vuex'
-export default {
-  name: 'login',
-  data () {
-    return {
-     
-    }
-  },
-  methods:{
-    
-    ...mapActions([
-//    'updateWaitingFlag'
-      ]),
-    login:function(){
-      var that = this;
-      // 显示waiting
-//    that.updateWaitingFlag(true);
-      console.log(that.$store.state);
-         // ajax
-          that.$http.post('/tp/public/api1/user/login', {
-            username: that.$refs.username.value,
-            psw: that.$refs.psw.value
-          },{
-            emulateJSON: true
-          }).then(function(response){
-           
-//          that.updateWaitingFlag(false);
-            console.log(that.$store.state);
-            console.log(response.body);
-            
-            // 关闭waiting
+	import { Toast } from 'mint-ui';
+	import { mapGetters, mapActions } from 'vuex'
+	export default {
+		name: 'login',
+		data() {
+			return {
 
-          }, function(response) {
-            // error callback
-          });
-    }
-  },
-}
+			}
+		},
+		methods: {
+
+			...mapActions([
+				//				    'updateWaitingFlag'
+			]),
+			regests:function(){
+				location.hash="/regest"
+				
+				
+				
+			},
+			
+			
+			login: function() {
+				var that = this;
+				// 显示waiting
+				//    that.updateWaitingFlag(true);
+				console.log(that.$store.state);
+				// ajax
+				that.$http.post('/tp/public/api1/user/login', {
+					username: that.$refs.username.value,
+					psw: that.$refs.psw.value
+				}, {
+					emulateJSON: true
+				}).then(function(response) {
+
+					//that.updateWaitingFlag(false);
+					console.log(that.$store.state);
+					console.log(response.body);
+					alert(that.$cookie.get('name'))
+					if(response.body.msg == 0) {
+						Toast({
+							message: '登陆失败',
+							position: 'bottom',
+							duration: 5000
+						})
+					}
+
+					// 关闭waiting
+
+				}, function(response) {
+
+					// error callback
+				});
+			}
+		},
+	}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-a {
-  color: #42b983;
-}
+<style scoped lang="scss">
+	@import"../../static/style/login.css"
 </style>
