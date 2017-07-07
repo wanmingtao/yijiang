@@ -1,0 +1,24 @@
+div {
+  background: #FFFFFF;
+  height: 100%; }
+
+.header {
+  width: 100%;
+  height: 3.03704rem;
+  line-height: 3.03704rem;
+  border-bottom: 1px solid #ccc;
+  background: #FFFFFF;
+  display: flex;
+  justify-content: space-between; }
+  .header img {
+    width: 0.92593rem;
+    height: 1.2963rem;
+    margin: 0.92593rem; }
+
+img {
+  width: 7.77778rem;
+  height: 7.77778rem;
+  margin-top: 11.57407rem;
+  margin-left: 6.07407rem; }
+
+/*# sourceMappingURL=list_public.css.map */

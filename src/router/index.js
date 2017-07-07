@@ -49,6 +49,7 @@ export default new Router({
       path: '/wode',
       name: 'Wode',
       component: Wode
+      
     },
     {
       path: '/searche',

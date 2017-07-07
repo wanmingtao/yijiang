@@ -1,0 +1,93 @@
+$countPerpage:20;
+$designWidth:1080px;
+@function R($px) {
+    //width*countPerpage/designWidth
+    @return ($px*$countPerpage/$designWidth)*1rem;
+}
+
+.header {
+    box-sizing: border-box;
+    background: white;
+    padding:R(10px);
+    margin: 0;
+    height: R(128px);
+    width: 100%;
+    line-height: R(128px);
+    display: flex;
+    img {
+        
+        height: 60%;
+    }
+    div {
+        flex: 1;
+        display: flex;
+        .one{
+            text-align: center;
+            width:80%;   
+        }
+        .two{
+            flex: 1;
+            font-size: R(40px);  
+        }  
+    }
+}
+.login{
+    text-align: center;
+    input{
+        margin-top: R(100px);
+        text-align: center;
+        font-size: R(50px);
+        background: #e4e4e4;
+        border:none;
+        width: R(886px);
+        height: R(125px);
+        outline: none;
+        border-bottom: 1px solid #3e3e3e;
+        
+    }
+    p{
+        font-size: R(40px);
+        box-sizing: border-box;
+        margin-top: R(100px);
+        padding: 0 R(70px);
+        
+        span:first-of-type{
+            float: left;
+            text-indent: 1em;
+        }
+        span:nth-of-type(2){
+            margin-left: R(400px);
+            
+        }
+        span:nth-of-type(3){
+           
+            font-size: R(50px);
+            color: #3f51b5;
+            
+        }
+        
+        
+        
+        
+    }
+    button{
+        margin-left: R(70px);
+        width: 83%;
+        background: #000000;
+        color: white;
+        border: none;
+        margin-top: R(100px);
+        height: R(104px);
+        font-size: R(50px);
+        outline: none;
+        border-radius:R(10px) ;
+    }
+    .iconfont{
+        position: relative;
+        left: R(100px);
+        
+        font-size: R(100px);
+    }
+   
+}
+

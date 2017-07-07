@@ -1,8 +1,11 @@
 <template>
-	<div class="header">
-		<img src="../../static/img/zuo.png" />
-		<span>评价</span>
-		<span> </span>
+	<div>
+		<div class="header">
+			<a href="#Wode"><img src="../../static/img/zuo.png" /></a>
+			<span>评价</span>
+			<span> </span>
+		</div>
+		<img class="kong" src="../../static/img/kong.png" />
 	</div>
 </template>
 

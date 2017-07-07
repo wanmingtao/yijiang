@@ -14,10 +14,10 @@
 					<div><span>签到</span></div>
 				</div>
 				<ul class="continer_nav">
-					<li><i class="iconfont">&#xe680;</i>购物车<div></div></li>
-					<li><i class="iconfont">&#xe604;</i>我的订单<div></div></li>
-					<li><i class="iconfont">&#xe810;</i>待评价<div></div></li>
-					<li><i class="iconfont">&#xe61d;</i>优惠券<div></div></li>
+					<li><a href="#/Cart"><i class="iconfont">&#xe680;</i>购物车<div></div></a></li>
+					<li><a href="#/Order"><i class="iconfont">&#xe604;</i>我的订单<div></div></a></li>
+					<li><a href="#/Comment"><i class="iconfont">&#xe810;</i>待评价<div></div></a></li>
+					<li><a href="#/Coupon"><i class="iconfont">&#xe61d;</i>优惠券<div></div></a></li>
 				</ul>
 				<ul class="continer_menu">
 					<li><i class="iconfont">&#xe61f;</i>我的消息</li>

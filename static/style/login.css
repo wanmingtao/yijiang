@@ -1,0 +1,63 @@
+.header {
+  box-sizing: border-box;
+  background: white;
+  padding: 0.18519rem;
+  margin: 0;
+  height: 2.37037rem;
+  width: 100%;
+  line-height: 2.37037rem;
+  display: flex; }
+  .header img {
+    height: 60%; }
+  .header div {
+    flex: 1;
+    display: flex; }
+    .header div .one {
+      text-align: center;
+      width: 80%; }
+    .header div .two {
+      flex: 1;
+      font-size: 0.74074rem; }
+
+.login {
+  text-align: center; }
+  .login input {
+    margin-top: 1.85185rem;
+    text-align: center;
+    font-size: 0.92593rem;
+    background: #e4e4e4;
+    border: none;
+    width: 16.40741rem;
+    height: 2.31481rem;
+    outline: none;
+    border-bottom: 1px solid #3e3e3e; }
+  .login p {
+    font-size: 0.74074rem;
+    box-sizing: border-box;
+    margin-top: 1.85185rem;
+    padding: 0 1.2963rem; }
+    .login p span:first-of-type {
+      float: left;
+      text-indent: 1em; }
+    .login p span:nth-of-type(2) {
+      margin-left: 7.40741rem; }
+    .login p span:nth-of-type(3) {
+      font-size: 0.92593rem;
+      color: #3f51b5; }
+  .login button {
+    margin-left: 1.2963rem;
+    width: 83%;
+    background: #000000;
+    color: white;
+    border: none;
+    margin-top: 1.85185rem;
+    height: 1.92593rem;
+    font-size: 0.92593rem;
+    outline: none;
+    border-radius: 0.18519rem; }
+  .login .iconfont {
+    position: relative;
+    left: 1.85185rem;
+    font-size: 1.85185rem; }
+
+/*# sourceMappingURL=login.css.map */

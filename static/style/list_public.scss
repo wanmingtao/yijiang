@@ -4,8 +4,30 @@ $designWidth:1080px;
     @return ($px*$countPerpage/$designWidth)*1rem;
 }
 
+div{
+    background: #FFFFFF;
+    height: 100%;
+}
+
 .header{
     width:100%;
     height:R(164px);
+    line-height: R(164px);
     border-bottom:1px solid #ccc;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    
+    img{
+
+        width: R(50px);
+        height: R(70px);
+        margin: R(50px);
+    }
+}
+img{
+    width: R(420px);
+    height: R(420px);
+    margin-top: R(625px);
+    margin-left: R(328px);
 }

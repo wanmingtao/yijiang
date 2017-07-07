@@ -1,5 +1,65 @@
+$countPerpage:20;
+$designWidth:1080px;
+@function R($px) {
+    //width*countPerpage/designWidth
+    @return ($px*$countPerpage/$designWidth)*1rem;
+}
 .searche{
     height: 100%;
     width: 100%;
-    background: yellow;
+    background: white;
+    .header{
+        padding: 0;
+        margin: 0;
+        height: R(128px);
+        width: 100%;
+
+        line-height: R(128px);
+        display: flex;
+        img{
+            margin-left: 3%;
+            margin-top: 2%;
+            height: 60%;
+        }
+        div{
+            flex: 1;
+            display: flex;
+            
+           input{
+               text-indent: 2em;
+               display: block;
+               text-align: center;
+              font-size: R(50px);
+               outline: none;
+               border: none;
+               height: 100%;
+               width: 88%;
+           } 
+           span{
+               .iconfont{
+                   font-size:R(100px) ;
+               }
+           }
+        }
+    }
+    .continer{
+        text-align: center;
+        font-size: R(30px);
+        ul{ 
+            li{
+                font-size:16px ;
+                line-height: R(90px);
+                 color: #999;
+            }
+            li:first-of-type{
+                margin-top: R(40px);  
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
 }

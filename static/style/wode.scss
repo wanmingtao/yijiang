@@ -1,150 +1,152 @@
 $countPerpage:20;
 $designWidth:1080px;
 @function R($px) {
+    //width*countPerpage/designWidth
     @return ($px*$countPerpage/$designWidth)*1rem;
 }
 
-
   .main{
-  	.con{
-  		.header{
-  			box-shadow: 0px 3px 3px #cacaca;
-		    ul{
-		        li{
-		            .iconfont{
-		                font-size: R(90px);
-		            } 
-		             
-		        }
-		    }
-		}
+    .con{
+        .header{
+            background: #f0f0f0;
+            box-shadow: 0px 3px 3px #cacaca;
+            ul{
+                background: #f0f0f0;
+                li{
+                    .iconfont{
+                        font-size: R(90px);
+                    } 
+                     
+                }
+            }
+        }
 
-		.continer{
-			background: #fff;
-			.continer_log{
-				height: R(276px);
-				line-height: R(276px);
-				overflow: hidden;
-				div{
-					float: left;
-				}
-				div:nth-child(1){
-					float: left;
-					height: R(180px);
-					width: R(180px);
-					margin-left: R(48px);
-					margin-top: R(48px);
-					background: no-repeat url(../../static/img/jiangren/wode-log.png);
-					background-size: R(180px) R(180px);
-				}
-				div:nth-child(2){
-					float: left;
-					text-indent: 1em;
-					font-weight: 500;
-					font-size:  R(46px);
-				}
-				div:nth-child(3){
-					float: right;
-					height:  R(75px);
-					width:  R(174px);
-					border-radius: 10000px;
-					font-size:  R(40px);
-					border:  R(7px) solid #ed4f4f;
-					color: #ed4f4f;
-					margin-right:  R(43px);
-					margin-top:  R(100px);
-					span{
-						text-indent: 1.2em;
-						display: block;
-						margin-top:  R(-100px);
-					}
-				}
-			}
-			ul.continer_nav{
-				height:  R(267px);
-				color: #757575;
-				background: #fff;
-				line-height: R(267px);
-				display: flex;
-				font-size:  R(40px);
-				li{
-					flex: 1;
-					text-align: center;
-					position: relative;
-					i{
-						position: absolute;
-						width: R(106px);
-						height: R(106px);
-						top: R(40px);
-						left: R(90px);
-						line-height: 0px;
-						display: block;
-						font-size:  R(80px);
-						color: #ccc;
-					}
-					div{
-						width:  R(12px);
-						height:  R(12px);
-						border-radius:  R(100px);
-						position: absolute;
-						top:  R(5px);
-						right:  R(70px);
-						background: #eb503a;
-					}
-				}
-				i:active {color: #000;}
-				li:active {color: #000;}
-			}
-			ul.continer_menu{
-				background: #fff;
-				margin-top: R(24px);
+        .continer{
+            background: #f0f0f0;
+            .continer_log{
+                height: R(276px);
+                line-height: R(276px);
+                overflow: hidden;
+                div{
+                    float: left;
+                }
+                div:nth-child(1){
+                    float: left;
+                    height: R(180px);
+                    width: R(180px);
+                    margin-left: R(48px);
+                    margin-top: R(48px);
+//                  background: no-repeat url(../../static/img/jiangren/wode-log.png);
+                    background-size: R(180px) R(180px);
+                }
+                div:nth-child(2){
+                    float: left;
+                    text-indent: 1em;
+                    font-weight: 500;
+                    font-size:  R(46px);
+                }
+                div:nth-child(3){
+                    float: right;
+                    height:  R(75px);
+                    width:  R(174px);
+                    border-radius: 10000px;
+                    font-size:  R(40px);
+                    border:  R(7px) solid #ed4f4f;
+                    color: #ed4f4f;
+                    margin-right:  R(43px);
+                    margin-top:  R(100px);
+                    span{
+                        text-indent: 1.2em;
+                        display: block;
+                        margin-top:  R(-100px);
+                    }
+                }
+            }
+            ul.continer_nav{
+                height:  R(267px);
+                color: #757575;
+                background: #f0f0f0;
+                line-height: R(267px);
+                display: flex;
+                font-size:  R(40px);
+                li{
+                    flex: 1;
+                    text-align: center;
+                    position: relative;
+                    i{
+                        position: absolute;
+                        width: R(106px);
+                        height: R(106px);
+                        top: R(40px);
+                        left: R(90px);
+                        line-height: 0px;
+                        display: block;
+                        font-size:  R(80px);
+                        color: #666;
+                    }
+                    div{
+                        width:  R(12px);
+                        height:  R(12px);
+                        border-radius:  R(100px);
+                        position: absolute;
+                        top:  R(5px);
+                        right:  R(70px);
+                        background: #eb503a;
+                    }
+                }
+                i:active {color: #000;}
+                li:active {color: #000;}
+            }
+            ul.continer_menu{
+               background: #f0f0f0;
+                margin-top: R(24px);
 
-				li{
-					color: #717171;
-					height:  R(126px);
-					line-height:  R(126px);
-					i{
-						margin-left:  R(62px);
-						margin-right:  R(95px);
-						font-size:  R(80px);
-					}
-					span{
-						float: right;
-						color: #aeaeae;
-						margin-right:  R(80px);
-						font-weight: 900;
-					}
-				}
-				li:nth-child(1){
+                li{
+                    color: #717171;
+                    height:  R(126px);
+                    line-height:  R(126px);
+                    i{
+                        margin-left:  R(62px);
+                        margin-right:  R(95px);
+                        font-size:  R(80px);
+                    }
+                    span{
+                        float: right;
+                        color: #aeaeae;
+                        margin-right:  R(80px);
+                        font-weight: 900;
+                    }
+                }
+                li:nth-child(1){
 
-				}
-				li:nth-child(2){
+                }
+                li:nth-child(2){
 
-				}
-				li:nth-child(3){
+                }
+                li:nth-child(3){
 
-				}
-				li:nth-child(4){
-					border-bottom: 2px solid #ededed;
-				}
-				li:nth-child(5){
-					height: 90px;
-					line-height: 90px;
-					border-bottom: 2px solid #ededed;
-				}
-				li:nth-child(6){
-					height: 63px;
-					line-height: 63px;
+                }
+                li:nth-child(4){
+                    border-bottom: 2px solid #ededed;
+                }
+                li:nth-child(5){
+                    height: 90px;
+                    line-height: 90px;
+                    border-bottom: 2px solid #ededed;
+                }
+                li:nth-child(6){
+                    height: 63px;
+                    line-height: 63px;
 
-				}
-				li:nth-child(7){
-					height: 63px;
-					line-height: 63px;
+                }
+                li:nth-child(7){
+                    height: 63px;
+                    line-height: 63px;
 
-				}
-			}
-		}
-		
+                }
+            }
+        }
+        
 
-  	}
+    }
 }

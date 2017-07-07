@@ -1,6 +1,40 @@
 .searche {
   height: 100%;
   width: 100%;
-  background: yellow; }
+  background: white; }
+  .searche .header {
+    padding: 0;
+    margin: 0;
+    height: 2.37037rem;
+    width: 100%;
+    line-height: 2.37037rem;
+    display: flex; }
+    .searche .header img {
+      margin-left: 3%;
+      margin-top: 2%;
+      height: 60%; }
+    .searche .header div {
+      flex: 1;
+      display: flex; }
+      .searche .header div input {
+        text-indent: 2em;
+        display: block;
+        text-align: center;
+        font-size: 0.92593rem;
+        outline: none;
+        border: none;
+        height: 100%;
+        width: 88%; }
+      .searche .header div span .iconfont {
+        font-size: 1.85185rem; }
+  .searche .continer {
+    text-align: center;
+    font-size: 0.55556rem; }
+    .searche .continer ul li {
+      font-size: 16px;
+      line-height: 1.66667rem;
+      color: #999; }
+    .searche .continer ul li:first-of-type {
+      margin-top: 0.74074rem; }
 
 /*# sourceMappingURL=searche.css.map */
