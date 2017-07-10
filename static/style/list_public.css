@@ -21,4 +21,15 @@ img {
   margin-top: 11.57407rem;
   margin-left: 6.07407rem; }
 
+.xin table tr {
+  text-align: center; }
+  .xin table tr td {
+    width: 5.55556rem;
+    height: 1.85185rem; }
+    .xin table tr td img {
+      padding: 0;
+      margin: 0;
+      height: 1.85185rem;
+      width: 4.81481rem; }
+
 /*# sourceMappingURL=list_public.css.map */

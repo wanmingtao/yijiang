@@ -34,10 +34,11 @@ $designWidth:1080px;
 .login{
     text-align: center;
     input{
+        
         margin-top: R(100px);
         text-align: center;
         font-size: R(50px);
-        background: #e4e4e4;
+        background: #e4e4e4 !important;
         border:none;
         width: R(886px);
         height: R(125px);

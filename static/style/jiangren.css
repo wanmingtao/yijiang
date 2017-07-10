@@ -34,7 +34,8 @@
       .continer .con dl dt img {
         width: 9.85185rem;
         height: 9.64815rem; }
-      .continer .con dl dd {
-        line-height: 2.88889rem; }
+      .continer .con dl dd.t {
+        line-height: 2.88889rem;
+        height: 2.88889rem; }
 
 /*# sourceMappingURL=jiangren.css.map */

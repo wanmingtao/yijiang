@@ -1,0 +1,173 @@
+$countPerpage:20;
+$designWidth:1080px;
+@function R($px) {
+    //width*countPerpage/designWidth
+    @return ($px*$countPerpage/$designWidth)*1rem;
+}
+
+.main{
+    height: 100%;
+    display: flex;
+    overflow-y: auto;
+    .header {
+        box-sizing: border-box;
+        background: white;
+        padding: R(10px);
+        margin: 0;
+        height: R(128px);
+        width: 100%;
+        line-height: R(128px);
+        display: flex;
+        img {
+            height: 60%;
+        }
+        div {
+            flex: 1;
+            display: flex;
+            .one {
+                text-align: center;
+                width: 80%;
+            }
+            .two {
+                flex: 1;
+                font-size: R(40px);
+            }
+        }
+    }
+    .continer {
+        flex: 1;
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+    .footer{
+        height: R(150px);
+        width: 100%;
+        line-height: R(150px);
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        .left{
+            background:#999;
+            width: R(300px);
+            span{
+                position: relative;
+                top:R(-50px);
+                background: #999;
+                left: R(30px);
+                text-align: center;
+                display: block;
+                height: R(150px);
+                width: R(150px);
+                line-height: R(150px);
+                border: R(15px) solid #ccc;
+                border-radius: 50%;
+                background: #999;
+                .gry{
+                    font-size: R(80px);
+                    
+                }
+                .dgry{
+                    font-size: R(80px);
+                    color: red;
+                }
+            }   
+        }
+        .center{
+            width: R(450px);
+           background: #ccc;
+            text-align: center;
+            span{
+                
+                font-weight: 900;
+                color: white;
+            }
+        }
+        .right{
+            
+            text-align: center;
+            font-weight: 900;
+            flex: 1;
+            color: white;
+            background:#999;
+            
+        }
+       
+    }
+    .pop{
+        width: 100%;
+        height: R(700px);
+        dl{
+            height: R(350px);
+            width: 100%;
+           
+            display: flex;
+            border-bottom: R(5px) solid #ccc;
+            
+            dt{
+                width: 50%;
+                
+                text-align: center;
+               
+                img{
+                   margin-top: R(100px);
+                    height: R(200px);
+                }  
+            }
+            dd{
+                text-align: center;
+                p{
+                    line-height: R(300px);
+                    font-size: R(100px);
+                    color: red;
+                }
+                
+            }
+        }
+        p{
+            line-height: R(70px);
+            margin-top: R(60px);
+            padding: 0 R(50px);
+            display: flex;
+            input{
+                display: block;
+                text-align: center;
+                line-height: R(70px);
+                height: R(70px);
+                width: R(150px);
+                padding: 0;
+                border: 0;
+                outline: 0;
+                background: #ccc;
+            }
+            span:first-of-type{
+                margin-left: R(350px);
+            }
+            span{
+                margin: 0 R(30px);
+                line-height: R(70px);
+                text-align: center;
+                display:inline-block;
+                height: R(70px);
+                width: R(70px);
+                background: #ccc;
+            }
+        }
+        button{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: red;
+            text-align: center;
+            height: R(120px);
+            line-height: R(120px);
+            font-size: R(60px);
+            border: 0;
+            outline: 0;
+            display: block;
+            outline: 0;
+            color: white;
+        }
+    }
+}

@@ -19,7 +19,6 @@ div{
     justify-content: space-between;
     
     img{
-
         width: R(50px);
         height: R(70px);
         margin: R(50px);
@@ -30,4 +29,22 @@ img{
     height: R(420px);
     margin-top: R(625px);
     margin-left: R(328px);
+}
+.xin{
+    table{
+        tr{
+            text-align: center;
+            
+            td{
+                width: R(300px);
+                height: R(100px);
+                img{
+                    padding: 0;
+                    margin: 0;
+                    height: R(100px);
+                    width: R(260px);
+                }
+            }
+        }
+    }
 }

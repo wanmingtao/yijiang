@@ -1,0 +1,131 @@
+.main {
+  height: 100%;
+  display: flex;
+  overflow-y: auto; }
+  .main .header {
+    box-sizing: border-box;
+    background: white;
+    padding: 0.18519rem;
+    margin: 0;
+    height: 2.37037rem;
+    width: 100%;
+    line-height: 2.37037rem;
+    display: flex; }
+    .main .header img {
+      height: 60%; }
+    .main .header div {
+      flex: 1;
+      display: flex; }
+      .main .header div .one {
+        text-align: center;
+        width: 80%; }
+      .main .header div .two {
+        flex: 1;
+        font-size: 0.74074rem; }
+  .main .continer {
+    flex: 1;
+    width: 100%; }
+    .main .continer img {
+      width: 100%; }
+  .main .footer {
+    height: 2.77778rem;
+    width: 100%;
+    line-height: 2.77778rem;
+    position: fixed;
+    bottom: 0;
+    display: flex; }
+    .main .footer .left {
+      background: #999;
+      width: 5.55556rem; }
+      .main .footer .left span {
+        position: relative;
+        top: -0.92593rem;
+        background: #999;
+        left: 0.55556rem;
+        text-align: center;
+        display: block;
+        height: 2.77778rem;
+        width: 2.77778rem;
+        line-height: 2.77778rem;
+        border: 0.27778rem solid #ccc;
+        border-radius: 50%;
+        background: #999; }
+        .main .footer .left span .gry {
+          font-size: 1.48148rem; }
+        .main .footer .left span .dgry {
+          font-size: 1.48148rem;
+          color: red; }
+    .main .footer .center {
+      width: 8.33333rem;
+      background: #ccc;
+      text-align: center; }
+      .main .footer .center span {
+        font-weight: 900;
+        color: white; }
+    .main .footer .right {
+      text-align: center;
+      font-weight: 900;
+      flex: 1;
+      color: white;
+      background: #999; }
+  .main .pop {
+    width: 100%;
+    height: 12.96296rem; }
+    .main .pop dl {
+      height: 6.48148rem;
+      width: 100%;
+      display: flex;
+      border-bottom: 0.09259rem solid #ccc; }
+      .main .pop dl dt {
+        width: 50%;
+        text-align: center; }
+        .main .pop dl dt img {
+          margin-top: 1.85185rem;
+          height: 3.7037rem; }
+      .main .pop dl dd {
+        text-align: center; }
+        .main .pop dl dd p {
+          line-height: 5.55556rem;
+          font-size: 1.85185rem;
+          color: red; }
+    .main .pop p {
+      line-height: 1.2963rem;
+      margin-top: 1.11111rem;
+      padding: 0 0.92593rem;
+      display: flex; }
+      .main .pop p input {
+        display: block;
+        text-align: center;
+        line-height: 1.2963rem;
+        height: 1.2963rem;
+        width: 2.77778rem;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        background: #ccc; }
+      .main .pop p span:first-of-type {
+        margin-left: 6.48148rem; }
+      .main .pop p span {
+        margin: 0 0.55556rem;
+        line-height: 1.2963rem;
+        text-align: center;
+        display: inline-block;
+        height: 1.2963rem;
+        width: 1.2963rem;
+        background: #ccc; }
+    .main .pop button {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: red;
+      text-align: center;
+      height: 2.22222rem;
+      line-height: 2.22222rem;
+      font-size: 1.11111rem;
+      border: 0;
+      outline: 0;
+      display: block;
+      outline: 0;
+      color: white; }
+
+/*# sourceMappingURL=xiangqing.css.map */
