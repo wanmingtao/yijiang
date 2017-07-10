@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="header">
-			<a href="#Wode"><img src="../../static/img/zuo.png" /></a>
+			<router-link to="/Wode"><img src="../../static/img/zuo.png" /></router-link>
 			<span>优惠券</span>
 			<span> </span>
 		</div>

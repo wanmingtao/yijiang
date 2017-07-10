@@ -4,7 +4,7 @@
 			<div class="header">
 				<ul>
 					<li>匠物</li>
-					<li><a href="#/Searche"><i class="iconfont">&#xe6e4;</i></a></li>
+					<li><router-link to="/Searche"><i class="iconfont">&#xe6e4;</i></router-link></li>
 				</ul>
 			</div>
 			<div class="continer">
@@ -57,6 +57,21 @@
 				msg: '我是匠物页'
 
 			}
+		},
+		mounted:function(){
+			this.$http.post('/tp/public/api2/product/pchaxun', {
+				type: 5
+			}, {
+				emulateJSON: true
+			}).then(function(response) {
+				console.log(response);
+//				console.log(JSON.parse(response.body[0].img));
+//				var ss=response.body.img;
+//				console.log(ss);
+				
+			}, function(response) {
+
+			});
 		},
 		methods: {
 			...mapActions([

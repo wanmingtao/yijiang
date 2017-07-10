@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="header">
-			<a href="/wode"><img src="../../static/img/jiantou.gif" /></a>
+			<router-link to="/wode"><img src="../../static/img/jiantou.gif" /></router-link>
 			<div>
 				<span class="one">登录及注册</span>
 				<span class="two">短信登录</span>
@@ -32,21 +32,18 @@
 			...mapActions([
 				//				    'updateWaitingFlag'
 			]),
-			regests:function(){
-				location.hash="/regest"
-				
-				
-				
+			regests: function() {
+				location.hash = "#/regest"
+
 			},
-			
-			
+
 			login: function() {
 				var that = this;
 				// 显示waiting
 				//    that.updateWaitingFlag(true);
 				console.log(that.$store.state);
 				// ajax
-				that.$http.post('/tp/public/api1/user/login', {
+				that.$http.post('/tp/public/api2/user/login', {
 					username: that.$refs.username.value,
 					psw: that.$refs.psw.value
 				}, {
@@ -56,7 +53,12 @@
 					//that.updateWaitingFlag(false);
 					console.log(that.$store.state);
 					console.log(response.body);
-					alert(that.$cookie.get('name'))
+					if(response.body.msg == 1) {
+						this.$router.push({ //你需要接受路由的参数再跳转
+							path: '/wode'
+						});
+					}
+					//					alert(that.$cookie.get('name'))
 					if(response.body.msg == 0) {
 						Toast({
 							message: '登陆失败',

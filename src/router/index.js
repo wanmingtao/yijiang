@@ -6,6 +6,7 @@ import Login from '@/components/Login'
 import Jiangren from '@/components/Jiangren'
 import Jiangwu from '@/components/Jiangwu'
 import Wode from '@/components/Wode'
+import xiangqing from '@/components/xiangqing'
 import Searche from '@/components/Searche'
 import Cart from '@/components/Cart'
 import Order from '@/components/Order'
@@ -75,6 +76,11 @@ export default new Router({
       path: '/coupon',
       name: 'Coupon',
       component: Coupon
+    },
+    {
+      path: '/xiangqing',
+      name: 'xiangqing',
+      component: xiangqing
     }
   ]
 })

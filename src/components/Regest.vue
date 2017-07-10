@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="header">
-			<a href="/regest"><img src="../../static/img/jiantou.gif" /></a>
+			<router-link to="/login"><img src="../../static/img/jiantou.gif" /></router-link>
 			<div>
 				<span class="one">注册</span>
 				
@@ -36,7 +36,7 @@
 				// 显示waiting
 				// that.updateWaitingFlag(true);
 				// ajax
-				that.$http.post('/tp/public/api1/user/regest', {
+				that.$http.post('/tp/public/api2/user/regest', {
 					username: that.$refs.username.value,
 					psw: that.$refs.psw.value
 				}, {
@@ -45,7 +45,7 @@
 					console.log(1);
 					console.log(response);
 					// 关闭waiting
-					that.updateWaitingFlag(false);
+//					that.updateWaitingFlag(false);
 					console.log(2);
 
 				}, function(response) {

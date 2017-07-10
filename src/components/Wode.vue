@@ -4,7 +4,9 @@
 			<div class="header">
 				<ul>
 					<li>我的</li>
-					<li><a href=""><i class="iconfont">&#xe616;</i></a></li>
+					<li>
+						<a href=""><i class="iconfont">&#xe616;</i></a>
+					</li>
 				</ul>
 			</div>
 			<div class="continer">
@@ -14,10 +16,18 @@
 					<div><span>签到</span></div>
 				</div>
 				<ul class="continer_nav">
-					<li><a href="#/Cart"><i class="iconfont">&#xe680;</i>购物车<div></div></a></li>
-					<li><a href="#/Order"><i class="iconfont">&#xe604;</i>我的订单<div></div></a></li>
-					<li><a href="#/Comment"><i class="iconfont">&#xe810;</i>待评价<div></div></a></li>
-					<li><a href="#/Coupon"><i class="iconfont">&#xe61d;</i>优惠券<div></div></a></li>
+					<li @click="check(1)"><i class="iconfont">&#xe680;</i>购物车
+						<div></div>
+					</li>
+					<li @click="check(2)"><i class="iconfont">&#xe604;</i>我的订单
+						<div></div>
+					</li>
+					<li @click="check(3)"><i class="iconfont">&#xe810;</i>待评价
+						<div></div>
+					</li>
+					<li @click="check(4)"><i class="iconfont">&#xe61d;</i>优惠券
+						<div></div>
+					</li>
 				</ul>
 				<ul class="continer_menu">
 					<li><i class="iconfont">&#xe61f;</i>我的消息</li>
@@ -48,22 +58,54 @@
 
 			}
 		},
-//		mounted:function(){
-//		this.$router.push({//你需要接受路由的参数再跳转
-//                          path:'/regest'
-//                        });
-//			
-//		},
+		//		mounted:function(){
+		//		this.$router.push({//你需要接受路由的参数再跳转
+		//                          path:'/regest'
+		//                        });
+		//			
+		//		},
 		methods: {
 			...mapActions([
 				'savedata'
 			]),
-		},
+			check: function(e) {
+
+				if(this.$cookie.get('name')) {
+					if(e == 1) {
+						this.$router.push({ //你需要接受路由的参数再跳转
+							path: '/cart'
+						});
+					}
+					if(e == 2) {
+						this.$router.push({ //你需要接受路由的参数再跳转
+							path: '/order'
+						});
+					}
+					if(e == 3) {
+						this.$router.push({ //你需要接受路由的参数再跳转
+							path: '/comment'
+						});
+					}
+					if(e == 4) {
+						this.$router.push({ //你需要接受路由的参数再跳转
+							path: '/coupon'
+						});
+					}
+					
+
+				} else {
+					this.$router.push({ //你需要接受路由的参数再跳转
+						path: '/login'
+					});
+
+				}
+
+			}
+		}
 	}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-  @import"../../static/style/wode.scss"
-
+	@import"../../static/style/wode.scss"
 </style>
