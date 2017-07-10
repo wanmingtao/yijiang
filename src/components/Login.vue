@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="header">
-			<router-link to="/wode"><img src="../../static/img/jiantou.gif" /></router-link>
+			<a href="javascript:history.go(-1)"><img src="../../static/img/jiantou.gif" /></a>
 			<div>
 				<span class="one">登录及注册</span>
 				<span class="two">短信登录</span>
@@ -30,7 +30,7 @@
 		methods: {
 
 			...mapActions([
-				//				    'updateWaitingFlag'
+//				checkuser
 			]),
 			regests: function() {
 				location.hash = "#/regest"
@@ -49,16 +49,17 @@
 				}, {
 					emulateJSON: true
 				}).then(function(response) {
-
+					
 					//that.updateWaitingFlag(false);
-					console.log(that.$store.state);
+//					console.log(that.$store.state);
 					console.log(response.body);
 					if(response.body.msg == 1) {
-						this.$router.push({ //你需要接受路由的参数再跳转
-							path: '/wode'
-						});
+//						this.$router.push({ //你需要接受路由的参数再跳转
+//							path: '/wode'
+//						});
+						location.href='javascript:history.go(-1)';
 					}
-					//					alert(that.$cookie.get('name'))
+					//	alert(that.$cookie.get('name'))
 					if(response.body.msg == 0) {
 						Toast({
 							message: '登陆失败',
