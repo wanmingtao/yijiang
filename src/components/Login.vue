@@ -54,17 +54,17 @@
 //					console.log(that.$store.state);
 					console.log(response.body);
 					if(response.body.msg == 1) {
-//						this.$router.push({ //你需要接受路由的参数再跳转
-//							path: '/wode'
-//						});
-						location.href='javascript:history.go(-1)';
+						this.$router.push({ //你需要接受路由的参数再跳转
+							path: '/wode'
+						});
+//						location.href='javascript:history.go(-1)';
 					}
 					//	alert(that.$cookie.get('name'))
 					if(response.body.msg == 0) {
 						Toast({
 							message: '登陆失败',
 							position: 'bottom',
-							duration: 5000
+							duration: 3000
 						})
 					}
 

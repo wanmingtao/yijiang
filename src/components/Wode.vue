@@ -5,7 +5,7 @@
 				<ul>
 					<li>我的</li>
 					<li>
-						<a href=""><i class="iconfont">&#xe616;</i></a>
+						<span @click="tuichu">退出</span>
 					</li>
 				</ul>
 			</div>
@@ -68,6 +68,9 @@
 			...mapActions([
 				'savedata'
 			]),
+			tuichu:function(){
+				this.$cookie.delete('name');
+			},
 			check: function(e) {
 
 				if(this.$cookie.get('name')) {

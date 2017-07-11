@@ -7,21 +7,25 @@
 		</div>
 		<img v-if="show===false" class="kong" src="static/img/kong.png" />
 		<div v-else class="xin">
-			<table border="1">
-				<tr>
-					<th>名称</th>
-					<th>图片</th>
-					<th>价格</th>
-					<th>数量</th>
-				</tr>
-				<tr v-for="item in cart">
-					<td>{{item.name}}</td>
-					<td><img :src="'static/img/cart/'+item.img"/></td>
-					<td>{{item.price}}</td>
-					<td>{{item.count}}</td>
-				</tr>
-			</table>
+			<ul id="cartlist">
+				<div v-for="item in cart" class="list">
+					<div class="l">
+						<img :src="'static/img/cart/'+item.img" />
+					</div>
+					<div class="r">
+						<h4>{{ item.name }}</h4>
+						<li>价格：{{ item.price }}</li>
+						<li>数量：{{ item.count }}</li>
+						<li>小计：{{ item.count*item.price }}</li>
+					</div>
+
+				</div>
+
+			</ul>
 		</div>
+		<!--<div class="zongjia">
+			<span>总价：</span><span>1000</span>
+		</div>-->
 	</div>
 </template>
 
@@ -33,7 +37,7 @@
 			return {
 				cart: [],
 				show: true,
-				
+
 			}
 		},
 		mounted: function() {
@@ -44,7 +48,7 @@
 				console.log(res)
 				this.cart = res.body;
 				console.log(this.cart.length)
-				
+
 				if(this.cart.length > 0) {
 					this.show = true;
 				} else {

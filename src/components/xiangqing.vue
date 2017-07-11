@@ -12,7 +12,7 @@
 			</div>
 			<div class="footer">
 				<div class="left">
-					<span><i class="iconfont" :class="color">&#xe680;</i></span>
+					<span @click="cart"><i class="iconfont" :class="color">&#xe680;</i></span>
 				</div>
 				<div class="center">
 					总金额：￥<span>{{num*ximg.price}}</span>
@@ -134,7 +134,7 @@
 					Toast({
 						message: '请选择数量',
 						position: 'center',
-						duration: 5000
+						duration: 3000
 					})
 					return;
 
@@ -160,7 +160,21 @@
 
 				}
 
+			},
+			cart:function(){
+				var name = this.$cookie.get('name')
+
+				if(name === null) {
+					this.$router.push({ //你需要接受路由的参数再跳转
+						path: '/login'
+					});
+				} else {
+					this.$router.push({ //你需要接受路由的参数再跳转
+						path: '/cart'
+					});
+				}
 			}
+			
 
 		}
 	}

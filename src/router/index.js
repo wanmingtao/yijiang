@@ -12,6 +12,7 @@ import Cart from '@/components/Cart'
 import Order from '@/components/Order'
 import Comment from '@/components/Comment'
 import Coupon from '@/components/Coupon'
+import Shezhi from '@/components/shezhi'
 import { Navbar, TabItem } from 'mint-ui';
 
 Vue.component(Navbar.name, Navbar);
@@ -81,6 +82,11 @@ export default new Router({
       path: '/xiangqing',
       name: 'xiangqing',
       component: xiangqing
+    },
+    {
+      path: '/shezhi',
+      name: 'Shezhi',
+      component: Shezhi
     }
   ]
 })
