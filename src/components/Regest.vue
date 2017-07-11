@@ -37,14 +37,14 @@
 			]),
 			check: function() {
 				var reg = /^1[3|4|5|7|8][0-9]{9}$/;
-				if(reg.test(this.username)==true) {
+				if(reg.test(this.username) == true) {
 					console.log('通过');
-//				if(this.username.length < 5) {
-//					Toast({
-//						message: '请输入长度大于5位的账户',
-//						position: 'bottom',
-//						duration: 3000
-//					})
+					//				if(this.username.length < 5) {
+					//					Toast({
+					//						message: '请输入长度大于5位的账户',
+					//						position: 'bottom',
+					//						duration: 3000
+					//					})
 					this.checks2 = true;
 				} else {
 					console.log('未通过');
@@ -83,7 +83,7 @@
 				}
 			},
 			regest: function() {
-				if((this.checks === true)&&(this.checks2 === true)) {
+				if((this.checks === true) && (this.checks2 === true)) {
 					this.$http.post('/tp/public/api2/user/regest', {
 						username: this.username,
 						psw: this.psw
@@ -96,12 +96,12 @@
 					}, function(response) {
 						// error callback
 					});
-				}else{
+				} else {
 					Toast({
-								message: '请安要求注册',
-								position: 'bottom',
-								duration: 3000
-							});
+						message: '请安要求注册',
+						position: 'bottom',
+						duration: 3000
+					});
 				}
 
 			}

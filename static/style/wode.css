@@ -11,8 +11,13 @@
     height: 5.11111rem;
     line-height: 5.11111rem;
     overflow: hidden; }
-    .main .con .continer .continer_log div {
+    .main .con .continer .continer_log div.tou {
       float: left; }
+      .main .con .continer .continer_log div.tou img {
+        height: 3.33333rem;
+        width: 3.33333rem;
+        border: 0.03704rem solid #ccc;
+        border-radius: 50%; }
     .main .con .continer .continer_log div:nth-child(1) {
       float: left;
       height: 3.33333rem;

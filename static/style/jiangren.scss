@@ -9,7 +9,7 @@ $designWidth:1080px;
     ul{
         li{
             .iconfont{
-                font-size: R(90px);
+                font-size: R(80px);
             }
         }
     }
@@ -17,6 +17,7 @@ $designWidth:1080px;
 .continer{
     background: #fafafa;
     .nav{
+        
         height: R(626px);
         width: 100%;
         background: #fafafa;
@@ -36,7 +37,7 @@ $designWidth:1080px;
                     width: 70%;
                 }
                 span{
-                    font-size: R(45px);
+                    font-size: R(40px);
                     display: inline-block;
                     text-indent: 1em;
                 }

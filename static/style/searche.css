@@ -11,7 +11,7 @@
     line-height: 2.37037rem;
     display: flex; }
     .searche .header img {
-      margin-left: 3%;
+      padding-left: 3%;
       height: 1.48148rem; }
     .searche .header div {
       flex: 1;

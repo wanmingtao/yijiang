@@ -11,8 +11,8 @@
 			</div>
 			<div class="continer">
 				<div class="continer_log">
-					<div></div>
-					<div>尚未登录</div>
+					<div class="tou"><img src="static/img/cart/ssw3.png" /></div>
+					<div>{{msg}}登录</div>
 					<div><span>签到</span></div>
 				</div>
 				<ul class="continer_nav">
@@ -55,27 +55,33 @@
 		},
 		data() {
 			return {
-				msg: '我是我的页'
+				msg: ''
 
 			}
 		},
-		//		mounted:function(){
-		//		this.$router.push({//你需要接受路由的参数再跳转
-		//                          path:'/regest'
-		//                        });
-		//			
-		//		},
+		mounted: function() {
+			this.jiance();
+		},
 		methods: {
 			...mapActions([
 				'savedata'
 			]),
-			tuichu:function(){
+			tuichu: function() {
 				this.$cookie.delete('name');
 				Toast({
-							message: '退出成功',
-							position: 'bottom',
-							duration: 3000
-						})
+					message: '退出成功',
+					position: 'bottom',
+					duration: 3000
+				});
+				this.jiance();
+			},
+			jiance: function() {
+				var name = this.$cookie.get('name');
+				if(name == null) {
+					this.msg = '尚未'
+				} else {
+					this.msg = name;
+				}
 			},
 			check: function(e) {
 
@@ -100,7 +106,6 @@
 							path: '/coupon'
 						});
 					}
-					
 
 				} else {
 					this.$router.push({ //你需要接受路由的参数再跳转

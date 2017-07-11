@@ -8,6 +8,8 @@ import store from './store'
 import Vueresource from 'vue-resource'
 import { Popup } from 'mint-ui';
 import { Indicator } from 'mint-ui';
+import { Loadmore } from 'mint-ui';
+Vue.component(Loadmore.name, Loadmore);
 //import VueCookie from './vue-cookie'
 var VueCookie = require('vue-cookie');
 Vue.component(Popup.name, Popup);

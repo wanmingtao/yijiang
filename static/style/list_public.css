@@ -11,6 +11,7 @@ div {
   border-bottom: 1px solid #ccc;
   background: #FFFFFF;
   display: flex;
+  font-size: 1.48148rem;
   flex-direction: row;
   justify-content: space-between; }
   .header img {
@@ -28,7 +29,7 @@ img {
   overflow-y: auto;
   flex: 1; }
   .xin #cartlist .list {
-    border-bottom: 3px solid #e0e0e0;
+    border-bottom: 2px solid #e0e0e0;
     height: 5.38889rem;
     display: flex;
     flex-direction: row; }
@@ -43,6 +44,9 @@ img {
       flex: 1;
       box-sizing: border-box;
       padding-left: 0.92593rem; }
+      .xin #cartlist .list .r h4 {
+        font-weight: 500;
+        font-size: 0.92593rem; }
       .xin #cartlist .list .r li {
         color: #999;
         font-size: 0.92593rem; }
