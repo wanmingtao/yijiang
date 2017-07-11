@@ -26,8 +26,8 @@
 			return {
 				username: '',
 				psw: '',
-				checks: true,
-				checks2: true
+				checks: false,
+				checks2: false
 			}
 		},
 		methods: {
@@ -36,18 +36,27 @@
 				//    'updateWaitingFlag'
 			]),
 			check: function() {
-				if(this.username.length < 5) {
+				var reg = /^1[3|4|5|7|8][0-9]{9}$/;
+				if(reg.test(this.username)==true) {
+					console.log('通过');
+//				if(this.username.length < 5) {
+//					Toast({
+//						message: '请输入长度大于5位的账户',
+//						position: 'bottom',
+//						duration: 3000
+//					})
+					this.checks2 = true;
+				} else {
+					console.log('未通过');
+					this.checks2 = false;
 					Toast({
-						message: '请输入长度大于5位的账户',
+						message: '请输入手机号',
 						position: 'bottom',
 						duration: 3000
 					})
-					this.checks2 = false;
-				} else {
-					this.checks2 = true;
 				}
 
-				if(this.checks2 = true) {
+				if(this.checks2 == true) {
 
 					this.$http.post('/tp/public/api2/user/checkname', {
 						username: this.username,
@@ -74,7 +83,7 @@
 				}
 			},
 			regest: function() {
-				if((this.checks = true)&&(this.checks2 = true)) {
+				if((this.checks === true)&&(this.checks2 === true)) {
 					this.$http.post('/tp/public/api2/user/regest', {
 						username: this.username,
 						psw: this.psw
@@ -87,6 +96,12 @@
 					}, function(response) {
 						// error callback
 					});
+				}else{
+					Toast({
+								message: '请安要求注册',
+								position: 'bottom',
+								duration: 3000
+							});
 				}
 
 			}
