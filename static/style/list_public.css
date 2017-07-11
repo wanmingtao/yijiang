@@ -41,6 +41,7 @@ img {
         width: 6.66667rem;
         height: 4.44444rem; }
     .xin #cartlist .list .r {
+      position: relative;
       flex: 1;
       box-sizing: border-box;
       padding-left: 0.92593rem; }
@@ -50,6 +51,16 @@ img {
       .xin #cartlist .list .r li {
         color: #999;
         font-size: 0.92593rem; }
+      .xin #cartlist .list .r li.sanchu {
+        height: 1.11111rem;
+        width: 1.11111rem;
+        text-align: center;
+        margin-top: 1.85185rem;
+        line-height: 1.11111rem;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        position: absolute;
+        right: 0.55556rem; }
 
 .zongjia {
   display: flex;

@@ -63,6 +63,7 @@ img {
                 }
             }
             .r {
+                position: relative;
                 flex: 1;
                 box-sizing: border-box;
                 padding-left: R(50px);
@@ -73,6 +74,17 @@ img {
                 li {
                     color: #999;
                     font-size: R(50px);
+                }
+                li.sanchu{
+                    height: R(60px);
+                    width: R(60px);
+                    text-align: center;
+                    margin-top: R(100px);
+                    line-height: R(60px);
+                    border: 1px solid #ccc;
+                    border-radius: 50%;
+                   position: absolute; 
+                   right: R(30px);
                 }
             }
         }

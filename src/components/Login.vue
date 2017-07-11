@@ -104,10 +104,7 @@
 					this.createCode();
 				} else  {
 					this.s=2;
-					console.log(this.s);
-					Toast({
-					  message: '验证码正确'
-					});
+					
 				}    
 			} ,
 
@@ -122,12 +119,12 @@
 				}).then(function(response) {
 					console.log(response.body);
 					if((response.body.msg == 1)&&(this.s==2)) {
-						alert('成功');
+						
 						this.$router.push({ //你需要接受路由的参数再跳转
 							path: '/wode'
 						});
 					}else{
-						alert('失败');
+						
 					}
 					//	alert(that.$cookie.get('name'))
 					if(response.body.msg == 0) {

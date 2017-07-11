@@ -17,6 +17,7 @@
 						<li>价格：{{ item.price }}</li>
 						<li>数量：{{ item.count }}</li>
 						<li>小计：{{ item.count*item.price }}</li>
+						<li class="sanchu" @click="sanchu(item.id)">X</li>
 					</div>
 
 				</div>
@@ -41,34 +42,45 @@
 			}
 		},
 		mounted: function() {
-
-			this.$http.post('/tp/public/api2/shopcart/gchaxun', {
-				emulateJSON: true
-			}).then(function(res) {
-				console.log(res)
-				this.cart = res.body;
-				console.log(this.cart.length)
-
-				if(this.cart.length > 0) {
-					this.show = true;
-				} else {
-					this.show = false;
-				}
-			}, function(res) {
-				console.log(res)
-			});
-
-			//					if(this.cart.length>0){
-			//						console.log(1);
-			//					}
-
+			this.load();
 		},
 		methods: {
 			...mapActions([
 
 			]),
+			sanchu(e) {
+				console.log(e);
+				this.$http.post('/tp/public/api2/shopcart/sanchu', {
+					id: e
+				}, {
+					emulateJSON: true
+				}).then(function(res) {
+					console.log(res)
+					this.load();
+				}, function(res) {
+					console.log(res)
+				});
+			},
+			load: function() {
+				this.$http.post('/tp/public/api2/shopcart/gchaxun', {
+					emulateJSON: true
+				}).then(function(res) {
+					console.log(res)
+					this.cart = res.body;
+					console.log(this.cart.length)
 
-		},
+					if(this.cart.length > 0) {
+						this.show = true;
+					} else {
+						this.show = false;
+					}
+				}, function(res) {
+					console.log(res)
+				});
+
+			}
+
+		}
 	}
 </script>
 
