@@ -6,14 +6,17 @@
   height: 2.37037rem;
   width: 100%;
   line-height: 2.37037rem;
-  display: flex; }
+  display: flex;
+  box-sizing: border-box;
+  padding-left: 0.55556rem; }
   .header img {
-    height: 60%; }
+    height: 1.48148rem; }
   .header div {
     flex: 1;
     display: flex; }
     .header div .one {
       text-align: center;
+      text-indent: 2em;
       width: 80%; }
     .header div .two {
       flex: 1;
@@ -31,6 +34,66 @@
     height: 2.31481rem;
     outline: none;
     border-bottom: 1px solid #3e3e3e; }
+  .login form {
+    width: 22.22222rem;
+    text-align: center;
+    display: block;
+    margin: 0 auto; }
+    .login form div {
+      overflow: hidden;
+      text-align: center; }
+      .login form div table tr {
+        margin-top: 0rem;
+        display: flex;
+        width: 20.37037rem;
+        margin-left: 1.48148rem; }
+        .login form div table tr td {
+          flex: 1;
+          float: right;
+          line-height: 2.77778rem; }
+      .login form div table tr:nth-child(1) {
+        display: flex;
+        margin-top: 0.92593rem; }
+        .login form div table tr:nth-child(1) td:nth-child(1) {
+          color: yellowgreen;
+          font-weight: 900;
+          font-size: 2.22222rem;
+          flex: 1; }
+        .login form div table tr:nth-child(1) td:nth-child(2) {
+          flex: 1; }
+        .login form div table tr:nth-child(1) td:nth-child(3) {
+          flex: 1; }
+          .login form div table tr:nth-child(1) td:nth-child(3) a {
+            display: block;
+            color: #999;
+            height: 4.62963rem; }
+      .login form div table tr:nth-child(2) {
+        width: 20.37037rem;
+        margin-top: -0.92593rem; }
+        .login form div table tr:nth-child(2) td:nth-child(1) {
+          position: relative; }
+          .login form div table tr:nth-child(2) td:nth-child(1) img {
+            height: 1.48148rem;
+            width: 1.85185rem;
+            position: absolute;
+            top: 2.40741rem;
+            right: 0.55556rem; }
+        .login form div table tr:nth-child(2) td:nth-child(2) #inputCode {
+          width: 9.25926rem; }
+        .login form div table tr:nth-child(2) td:nth-child(3) {
+          flex: 2; }
+          .login form div table tr:nth-child(2) td:nth-child(3) #Button1 {
+            margin-left: 1.2963rem;
+            width: 50%;
+            background: #000000;
+            color: white;
+            border: none;
+            margin-top: 1.85185rem;
+            height: 1.92593rem;
+            font-size: 0.92593rem;
+            outline: none;
+            border-radius: 0.18519rem;
+            margin-left: 0.18519rem; }
   .login p {
     font-size: 0.74074rem;
     box-sizing: border-box;

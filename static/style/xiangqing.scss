@@ -19,14 +19,18 @@ $designWidth:1080px;
         line-height: R(128px);
         display: flex;
         img {
-            height: 60%;
+            height: R(80px);
+            margin-left: R(50px);
         }
         div {
             flex: 1;
             display: flex;
             .one {
+                display: block;
                 text-align: center;
-                width: 80%;
+                width: 90%;
+                height: 100%;
+//              background: red;
             }
             .two {
                 flex: 1;

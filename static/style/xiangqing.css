@@ -12,13 +12,16 @@
     line-height: 2.37037rem;
     display: flex; }
     .main .header img {
-      height: 60%; }
+      height: 1.48148rem;
+      margin-left: 0.92593rem; }
     .main .header div {
       flex: 1;
       display: flex; }
       .main .header div .one {
+        display: block;
         text-align: center;
-        width: 80%; }
+        width: 90%;
+        height: 100%; }
       .main .header div .two {
         flex: 1;
         font-size: 0.74074rem; }

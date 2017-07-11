@@ -11,6 +11,7 @@ div {
   border-bottom: 1px solid #ccc;
   background: #FFFFFF;
   display: flex;
+  flex-direction: row;
   justify-content: space-between; }
   .header img {
     width: 0.92593rem;

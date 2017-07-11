@@ -14,15 +14,18 @@ $designWidth:1080px;
     width: 100%;
     line-height: R(128px);
     display: flex;
+    box-sizing: border-box;
+    padding-left: R(30px);
     img {
         
-        height: 60%;
+        height: R(80px);
     }
     div {
         flex: 1;
         display: flex;
         .one{
             text-align: center;
+            text-indent: 2em;
             width:80%;   
         }
         .two{
@@ -46,6 +49,98 @@ $designWidth:1080px;
         border-bottom: 1px solid #3e3e3e;
         
     }
+    form{
+        width: R(1200px);
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        div{
+
+            overflow: hidden;
+            text-align: center;
+
+            table{
+                
+                tr{
+                    margin-top: R(0px);
+                    display: flex;
+                    width: R(1100px);
+                    margin-left: R(80px);
+                    td{
+                        flex: 1;
+                        float: right;
+                    line-height: R(150px);
+                    }
+
+                }
+                tr:nth-child(1){
+                    display: flex;
+                    margin-top: R(50px);
+                    td:nth-child(1){
+                        color: yellowgreen;
+                        font-weight: 900;
+                        font-size: R(120px);
+                        flex: 1;
+                    }
+                    td:nth-child(2){
+                        flex: 1;
+                    }
+                    td:nth-child(3){
+                        flex: 1;
+                        a{
+                            display: block;
+                            color: #999;
+                            height: R(250px);
+                        }
+                    }
+                }
+
+
+                tr:nth-child(2){
+                    width: R(1100px);
+                    margin-top: R(-50px);
+                    td:nth-child(1){
+                        position: relative;
+                        img{
+                            height: R(80px);
+                            width: R(100px);
+                            position: absolute;
+                            top: R(130px);
+                            right: R(30px);
+                        }
+                    }
+                    td:nth-child(2){
+                        #inputCode{
+                            width: R(500px);
+                        }
+                    }
+                    td:nth-child(3){
+                        flex: 2;
+                        #Button1{
+                            margin-left: R(70px);
+                            width: 50%;
+                            background: #000000;
+                            color: white;
+                            border: none;
+                            margin-top: R(100px);
+                            height: R(104px);
+                            font-size: R(50px);
+                            outline: none;
+                            border-radius:R(10px) ;
+                            margin-left: R(10px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
     p{
         font-size: R(40px);
         box-sizing: border-box;

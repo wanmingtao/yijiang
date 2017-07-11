@@ -9,30 +9,31 @@ $designWidth:1080px;
     width: 100%;
     background: white;
     .header{
-        padding: 0;
+        box-sizing: border-box;
+        padding: R(30px);
         margin: 0;
         height: R(128px);
         width: 100%;
-
         line-height: R(128px);
         display: flex;
+//      background: red;
         img{
             margin-left: 3%;
-            margin-top: 2%;
-            height: 60%;
+            height: R(80px);
         }
         div{
             flex: 1;
             display: flex;
             
            input{
+//             margin-top: R(10px);
                text-indent: 2em;
                display: block;
                text-align: center;
               font-size: R(50px);
                outline: none;
                border: none;
-               height: 100%;
+               height: R(80px);
                width: 88%;
            } 
            span{
