@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="header">
-			<a href="javascript:history.go(-1)"><img src="../../static/img/jiantou.gif" /></a>
+			<a href="javascript:history.go(-1)"><img src="static/img/jiantou.gif" /></a>
 			<div>
 				<span class="one">登录及注册</span>
 				<span class="two">短信登录</span>
@@ -81,5 +81,5 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-	@import"../../static/style/login.css"
+	@import"static/style/login.scss"
 </style>

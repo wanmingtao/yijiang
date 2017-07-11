@@ -45,6 +45,7 @@
 </template>
 
 <script>
+	import { Toast } from 'mint-ui';
 	import { mapGetters, mapActions } from 'vuex';
 	import NavFooter from './NavFooter';
 	export default {
@@ -70,6 +71,11 @@
 			]),
 			tuichu:function(){
 				this.$cookie.delete('name');
+				Toast({
+							message: '退出成功',
+							position: 'bottom',
+							duration: 3000
+						})
 			},
 			check: function(e) {
 
@@ -110,5 +116,5 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-	@import"../../static/style/wode.scss"
+	@import"static/style/wode.scss"
 </style>

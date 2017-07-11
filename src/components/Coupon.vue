@@ -1,11 +1,11 @@
 <template>
 	<div>
 		<div class="header">
-			<router-link to="/Wode"><img src="../../static/img/zuo.png" /></router-link>
+			<router-link to="/Wode"><img src="static/img/zuo.png" /></router-link>
 			<span>优惠券</span>
 			<span> </span>
 		</div>
-		<img class="kong" src="../../static/img/kong.png" />
+		<img class="kong" src="static/img/kong.png" />
 	</div>
 </template>
 
@@ -29,5 +29,5 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-	@import"../../static/style/list_public.scss"
+	@import"static/style/list_public.scss"
 </style>

@@ -85,7 +85,7 @@
 					</div>
 
 					<div class="up">
-						<img src="../../static/img/one7.gif" />
+						<img src="static/img/one7.gif" />
 						<div class="swiper-container swipertwo">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide one">
