@@ -36,21 +36,16 @@
 				//    'updateWaitingFlag'
 			]),
 			check: function() {
-				var reg = /^1[3|4|5|7|8][0-9]{9}$/;
-				if(reg.test(this.username) == true) {
+//				var reg = /^1[3|4|5|7|8][0-9]{9}$/;
+				if(this.username.length>=5) {
 					console.log('通过');
-					//				if(this.username.length < 5) {
-					//					Toast({
-					//						message: '请输入长度大于5位的账户',
-					//						position: 'bottom',
-					//						duration: 3000
-					//					})
+					
 					this.checks2 = true;
 				} else {
-					console.log('未通过');
+					console.log('长度需5位以上');
 					this.checks2 = false;
 					Toast({
-						message: '请输入手机号',
+						message: '用户名长度需5位以上',
 						position: 'bottom',
 						duration: 3000
 					})

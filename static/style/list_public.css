@@ -28,45 +28,64 @@ img {
 .xin {
   overflow-y: auto;
   flex: 1; }
-  .xin #cartlist .list {
-    border-bottom: 2px solid #e0e0e0;
-    height: 5.38889rem;
-    display: flex;
-    flex-direction: row; }
-    .xin #cartlist .list .l {
-      width: 7.40741rem;
-      height: 5.38889rem; }
-      .xin #cartlist .list .l img {
-        margin: 0.44444rem;
-        width: 6.66667rem;
-        height: 4.44444rem; }
-    .xin #cartlist .list .r {
-      position: relative;
-      flex: 1;
-      box-sizing: border-box;
-      padding-left: 0.92593rem; }
-      .xin #cartlist .list .r h4 {
-        font-weight: 500;
-        font-size: 0.92593rem; }
-      .xin #cartlist .list .r li {
-        color: #999;
-        font-size: 0.92593rem; }
-      .xin #cartlist .list .r li.sanchu {
-        height: 1.11111rem;
-        width: 1.11111rem;
-        text-align: center;
-        margin-top: 1.85185rem;
-        line-height: 1.11111rem;
-        border: 1px solid #ccc;
-        border-radius: 50%;
-        position: absolute;
-        right: 0.55556rem; }
+  .xin #cartlist {
+    margin-bottom: 2.77778rem; }
+    .xin #cartlist .list {
+      border-bottom: 2px solid #e0e0e0;
+      height: 5.38889rem;
+      display: flex;
+      flex-direction: row; }
+      .xin #cartlist .list .l {
+        width: 7.40741rem;
+        height: 5.38889rem; }
+        .xin #cartlist .list .l img {
+          margin: 0.44444rem;
+          width: 6.66667rem;
+          height: 4.44444rem; }
+      .xin #cartlist .list .r {
+        flex: 1;
+        box-sizing: border-box;
+        padding-left: 0.92593rem;
+        display: flex;
+        flex-direction: row; }
+        .xin #cartlist .list .r div.xinxi {
+          width: 9.25926rem;
+          height: 100%; }
+          .xin #cartlist .list .r div.xinxi h4 {
+            font-weight: 500;
+            font-size: 0.92593rem; }
+          .xin #cartlist .list .r div.xinxi li {
+            color: #999;
+            font-size: 0.92593rem; }
+        .xin #cartlist .list .r div.cao {
+          margin-right: 0.37037rem;
+          text-align: center;
+          height: 100%;
+          flex: 1;
+          display: flex;
+          flex-direction: column; }
+          .xin #cartlist .list .r div.cao li.jia {
+            border: 1px solid #ccc;
+            float: left;
+            height: 1.85185rem; }
+          .xin #cartlist .list .r div.cao li.sanchu {
+            flex: 1; }
+          .xin #cartlist .list .r div.cao li.jian {
+            border: 1px solid #ccc;
+            float: left;
+            margin-top: 10px;
+            height: 1.85185rem; }
 
 .zongjia {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  text-indent: 2em;
   display: flex;
   flex-direction: row;
   height: 2.77778rem;
   background: red;
-  line-height: 2.77778rem; }
+  line-height: 2.77778rem;
+  color: white; }
 
 /*# sourceMappingURL=list_public.css.map */

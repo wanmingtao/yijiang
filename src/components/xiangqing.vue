@@ -49,7 +49,7 @@
 				xid: '',
 				ximg: '',
 				popupVisible: false,
-				num: 0,
+				num: 1,
 				color: 'gry'
 			}
 		},
@@ -60,6 +60,7 @@
 			});
 		},
 		mounted: function() {
+			var that=this;
 
 			//			Indicator.open();
 
@@ -69,20 +70,23 @@
 				this.xid = id[1].substr(3);
 			}
 			//				console.log(this.xid);
+//			setTimeout(function(){
+				
+				
+				that.$http.post('/tp/public/api2/product/info', {
+					xid: that.xid
+				}, {
+					emulateJSON: true
+				}).then(function(response) {
+					console.log(response);
+					that.ximg = response.body[0];
+					Indicator.close();
 
-			this.$http.post('/tp/public/api2/product/info', {
-				xid: this.xid
-			}, {
-				emulateJSON: true
-			}).then(function(response) {
-				console.log(response);
-				this.ximg = response.body[0];
-				Indicator.close();
+				}, function(response) {
+					// error callback
 
-			}, function(response) {
-				// error callback
-
-			});
+				});
+//			},1000)
 
 			//			setTimeout(function(){
 			//				

@@ -31,7 +31,7 @@
 						</tr>
 
 						<tr>
-							<td><img src="../../static/img/yzm.png" /></td>
+							<td><img src="static/img/yzm.png" /></td>
 							<td><input style="float:left;" type="text" id="inputCode" ref="inputCode" @blur="validateCode" /></td>
 							<td><input id="Button1" @click="validateCode();" type="button" /></td>
 						</tr>

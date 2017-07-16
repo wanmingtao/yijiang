@@ -8,29 +8,36 @@
 		<img v-if="show===false" class="kong" src="static/img/kong.png" />
 		<div v-else class="xin">
 			<ul id="cartlist">
-				<div v-for="item in cart" class="list">
+				<div v-for="(item,index) in cart" class="list">
 					<div class="l">
 						<img :src="'static/img/cart/'+item.img" />
 					</div>
 					<div class="r">
-						<h4>{{ item.name }}</h4>
-						<li>价格：{{ item.price }}</li>
-						<li>数量：{{ item.count }}</li>
-						<li>小计：{{ item.count*item.price }}</li>
-						<li class="sanchu" @click="sanchu(item.id)">X</li>
+						<div class="xinxi">
+							
+							<h4>{{ item.name }}</h4>
+							<li>价格：{{ item.price }}</li>
+							<li>数量：{{ item.count }}</li>
+							<li>小计：{{ item.count*item.price }}</li>
+						</div>
+						<div class="cao">
+							
+							<li class="jia" @click="jia(index)">+</li>
+							<li class="sanchu" @click="sanchu(item.id)">删除</li>
+							<li class="jian" @click="jian(index)">-</li>
+						</div>
 					</div>
-
 				</div>
-
 			</ul>
 		</div>
-		<!--<div class="zongjia">
-			<span>总价：</span><span>1000</span>
-		</div>-->
+		<div class="zongjia">
+			<span>总价：</span><span>￥{{mony}}</span>
+		</div>
 	</div>
 </template>
 
 <script>
+	import { Toast } from 'mint-ui';
 	import { mapGetters, mapActions } from 'vuex'
 	export default {
 		name: 'cart',
@@ -38,36 +45,69 @@
 			return {
 				cart: [],
 				show: true,
-
+				mony: 100
 			}
 		},
 		mounted: function() {
 			this.load();
 		},
+		watch: {
+			cart: {
+				handler: function(oldVal) {
+					var monyss = 0;
+					for(var i = 0; i < oldVal.length; i++) {
+						monyss += oldVal[i].count * oldVal[i].price;
+					}
+					this.mony = monyss;
+				},
+
+				deep: true
+			}
+		},
+
 		methods: {
 			...mapActions([
 
 			]),
 			sanchu(e) {
-				console.log(e);
+				//				console.log(e);
 				this.$http.post('/tp/public/api2/shopcart/sanchu', {
 					id: e
 				}, {
 					emulateJSON: true
 				}).then(function(res) {
-					console.log(res)
+					//					console.log(res)
+
 					this.load();
 				}, function(res) {
-					console.log(res)
+					//					console.log(res)
 				});
 			},
+			jia: function(e) {
+				this.cart[e]['count']++;
+				
+			},
+			jian: function(e) {
+				this.cart[e]['count']--;
+				if(this.cart[e]['count']<=1){
+					this.cart[e]['count']=1
+					Toast({
+					  message: '最少为一件'
+					});
+				}
+			},
 			load: function() {
+				var monys = 0;
 				this.$http.post('/tp/public/api2/shopcart/gchaxun', {
 					emulateJSON: true
 				}).then(function(res) {
-					console.log(res)
 					this.cart = res.body;
-					console.log(this.cart.length)
+					for(var i = 0; i < res.body.length; i++) {
+						monys += res.body[i].count * res.body[i].price;
+					}
+					console.log(monys)
+					this.mony = monys;
+					console.log(this.mony)
 
 					if(this.cart.length > 0) {
 						this.show = true;

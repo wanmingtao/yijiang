@@ -1,5 +1,4 @@
 @charset 'utf-8';
-
 $countPerpage:20;
 $designWidth:1080px;
 @function R($px) {
@@ -11,13 +10,9 @@ div {
     height: 100%;
     display: flex;
     flex-direction: column;
-   
-    
 }
 
 .header {
-
-    
     width: 100%;
     height: R(164px);
     line-height: R(164px);
@@ -43,16 +38,14 @@ img {
 
 .xin {
     overflow-y: auto;
-    flex: 1;  
-    
+    flex: 1;
     #cartlist {
-        
+         margin-bottom:R(150px) ;
         .list {
             border-bottom: 2px solid #e0e0e0;
             height: R(291px);
             display: flex;
             flex-direction: row;
-            
             .l {
                 width: R(400px);
                 height: R(291px);
@@ -63,39 +56,73 @@ img {
                 }
             }
             .r {
-                position: relative;
+                //              position: relative;
                 flex: 1;
                 box-sizing: border-box;
                 padding-left: R(50px);
-                h4{
-                    font-weight: 500;
-                    font-size: R(50px);
+                display: flex;
+                flex-direction: row;
+                div.xinxi {
+                    width: R(500px);
+                    height: 100%;
+//                  background: green;
+                    h4 {
+                        font-weight: 500;
+                        font-size: R(50px);
+                    }
+                    li {
+                        color: #999;
+                        font-size: R(50px);
+                    }
                 }
-                li {
-                    color: #999;
-                    font-size: R(50px);
-                }
-                li.sanchu{
-                    height: R(60px);
-                    width: R(60px);
+                div.cao {
+                    margin-right: R(20px);
                     text-align: center;
-                    margin-top: R(100px);
-                    line-height: R(60px);
-                    border: 1px solid #ccc;
-                    border-radius: 50%;
-                   position: absolute; 
-                   right: R(30px);
+                    height: 100%;
+                    flex: 1;
+//                  background: blue;
+                    display: flex;
+                    flex-direction: column;
+                    
+                    li.jia {
+//                      border-radius: 50%;
+                        border: 1px solid #ccc;
+                        float: left;
+                        height: R(100px);
+//                      background: red;
+//                      margin-top: R(-30px);
+                    }
+                    li.sanchu {
+//                      border: 1px solid #ccc;
+                        
+                        flex: 1;
+                    }
+                    li.jian {
+//                      border-radius: 50%;
+                        border: 1px solid #ccc;
+                        float: left;
+                        margin-top: 10px;
+                        height: R(100px);
+                       
+//                      background: pink;
+                    }
                 }
             }
         }
     }
 }
 
-.zongjia{
+.zongjia {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+   
+    text-indent: 2em;
     display: flex;
     flex-direction: row;
     height: R(150px);
     background: red;
     line-height: R(150px);
-    span:nth-of-type(1){}
+    color: white;
+    span:nth-of-type(1) {}
 }

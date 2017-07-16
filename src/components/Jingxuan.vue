@@ -142,9 +142,11 @@
 		components: {
 			NavFooter
 		},
+		beforeMount:function(){
+			
+		},
 		mounted: function() {
 			var that=this;
-			
 			this.load();
 			setTimeout(function() {
 				var swiper = new Swiper('.swiperone', {
@@ -168,7 +170,8 @@
 				lunlist: [],
 				list3: [],
 				allLoaded: false,
-				msg:'玩命加载中。。。'
+				msg:'玩命加载中。。。',
+				loadmore:false
 			}
 		},
 		methods: {
@@ -176,7 +179,7 @@
 				'savedata'
 			]),
 			loadTop() {
-				var that=this;
+				   var that=this;
 				
 					that.load();
 					that.$refs.loadmore.onTopLoaded();
@@ -192,6 +195,7 @@
 				}, {
 					emulateJSON: true
 				}).then(function(response) {
+					this.loadmore=true;
 					for(var i = 0; i < response.body.length; i++) {
 						if(response.body[i].type == "2") {
 							this.list.push(response.body[i]);
